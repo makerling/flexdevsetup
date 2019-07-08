@@ -1,5 +1,7 @@
 @echo off
 
+echo "Downloading latest version of script, running shortly..."
+
 REM need to run a admin, Windows 10 might block this from running, need to disable SmartScreen
 REM installs Boxstarter and Chocolatey from web - ensures latest version is always installed
 
