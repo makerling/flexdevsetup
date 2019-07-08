@@ -1,6 +1,8 @@
 # Description: Boxstarter Script
 # Common dev settings for desktop app development
 
+Update-SessionEnvironment #refreshing env to recognize boxstarter install
+
 Disable-UAC
 
 #--- Configuring Windows properties ---
