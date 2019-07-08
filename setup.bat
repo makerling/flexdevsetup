@@ -2,14 +2,19 @@
 
 echo "Downloading latest version of script, running shortly..."
 
-REM need to run a admin, Windows 10 might block this from running, need to disable SmartScreen
+REM need to run as admin, Windows 10 might block this from running, need to disable SmartScreen (click 'more info' click 'run anyways')
 REM installs Boxstarter and Chocolatey from web - ensures latest version is always installed
 
 powershell -NoProfile -ExecutionPolicy bypass -command ". { iwr -useb https://boxstarter.org/bootstrapper.ps1 } | iex; Get-Boxstarter -Force"
 
-REM installing/running Boxstarter package from raw file see: https://boxstarter.org/InstallingPackages
+echo
+echo "updating environment to recognize boxstarter install"
+REM syntax for cmd: https://github.com/chocolatey/choco/issues/1461
+REM reference: https://chocolatey.org/docs/helpers-update-session-environment
 
-REM powershell -NoProfile -ExecutionPolicy bypass -command "Install-BoxstarterPackage -DisableReboots -PackageName https://gist.githubusercontent.com/makerling/6af68b1c6bc636549b36ec19c41575d7/raw/3d924ff1b7ea9000b2c310ae07d04b7ed1674ce0/FLEx9-dev-setup.ps1"
+call refreshenv.cmd
+
+REM installing/running Boxstarter package from github text file see: https://boxstarter.org/InstallingPackages
 
 powershell -NoProfile -ExecutionPolicy bypass -command "Install-BoxstarterPackage -DisableReboots -PackageName https://raw.githubusercontent.com/makerling/flexdevsetup/master/boxstartercommands.ps1" 
 
