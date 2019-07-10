@@ -1,5 +1,6 @@
 @echo off
 
+REM ToDo: check if admin, else break, run boxstarter script from relative file rather than github text file (users an edit it easier)
 echo "Downloading latest version of script, running shortly..."
 
 REM need to run as admin, Windows 10 might block this from running, need to disable SmartScreen (click 'more info' click 'run anyways')
