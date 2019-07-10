@@ -1,6 +1,6 @@
 @echo off
 ::
-:: RefreshEnv.cmd
+:: RefreshEnv.cmd from https://github.com/chocolatey/choco/blob/master/src/chocolatey.resources/redirects/RefreshEnv.cmd
 ::
 :: Batch file to read environment variables from registry and
 :: set session variables to these values.
