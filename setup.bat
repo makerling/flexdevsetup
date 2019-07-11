@@ -17,7 +17,7 @@ call refreshenv.cmd
 
 REM installing/running Boxstarter package from github text file see: https://boxstarter.org/InstallingPackages
 
-powershell -NoProfile -ExecutionPolicy bypass -command "Install-BoxstarterPackage -DisableReboots -PackageName https://raw.githubusercontent.com/makerling/flexdevsetup/master/boxstartercommands.ps1" 
+powershell -NoProfile -ExecutionPolicy bypass -command "Install-BoxstarterPackage -DisableReboots -PackageName boxstartercommands.ps1" 
 
 echo "Script has completed, you can close the console and restart your machine."
 
