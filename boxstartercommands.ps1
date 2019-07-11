@@ -87,7 +87,7 @@ foreach ($app in $applicationList) {
 
 #installing helpful 3rd party software for Windows
 choco install chocolateygui -y
-choco install Google Chrome -y
+choco install GoogleChrome -y
 choco install git.install -y
 
 #installing VS 2017 and workloads/components for FLEx9 dev environment
