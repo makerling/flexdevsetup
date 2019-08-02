@@ -12,5 +12,6 @@ The script does the following:
 - leverages the chocolatey repository to install VS Studio 2017 with the recommended Workloads and components with no interaction needed from user, progress screen is shown so you know what's going on during the 4GB download
 - cleans up/removes unecessary applications that come with Windows out of the box
 - adds a few helpful tweaks (unhide system files, show file extensions, etc)
+- clones fwmeta and starts the initrepo script, user is given chance to choose which repos and projects to add
 
 The script might timeout with a flaky internet connection. It is safe to rerun it multiple times. 
