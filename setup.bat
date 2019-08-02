@@ -23,6 +23,10 @@ if %errorLevel% == 0 (
   REM installing/running Boxstarter package from local powershell script file see: https://boxstarter.org/InstallingPackages
   powershell -NoProfile -ExecutionPolicy bypass -command "Install-BoxstarterPackage -DisableReboots -PackageName "%~dp0%boxstartercommands.ps1"" 
 
+  REM cloning fwmeta and running initrepo script
+  set workingdirectory=%~dp0
+  start /b cmd /c "%ProgramFiles%\Git\git-bash.exe" %workingdirectory%script.sh
+
   echo Script has completed, you can close the console and restart your machine.
 ) else (
         echo Failure: Current permissions inadequate, close terminal and restart script as admin.
