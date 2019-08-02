@@ -1,5 +1,6 @@
 # Description: Boxstarter Script
 # Common dev settings for desktop app development
+# Most of this referenced from https://github.com/Microsoft/windows-dev-box-setup-scripts
 
 Update-SessionEnvironment #refreshing env to recognize boxstarter install
 
