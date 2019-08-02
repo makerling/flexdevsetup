@@ -25,7 +25,7 @@ if %errorLevel% == 0 (
 
   REM cloning fwmeta and running initrepo script
   set workingdirectory=%~dp0
-  start /b cmd /c "%ProgramFiles%\Git\git-bash.exe" %workingdirectory%script.sh
+  start /b cmd /c "%ProgramFiles%\Git\git-bash.exe" %workingdirectory%clonefieldworks.sh
 
   echo Script has completed, you can close the console and restart your machine.
 ) else (
