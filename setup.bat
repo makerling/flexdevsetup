@@ -24,8 +24,7 @@ if %errorLevel% == 0 (
   powershell -NoProfile -ExecutionPolicy bypass -command "Install-BoxstarterPackage -DisableReboots -PackageName "%~dp0%boxstartercommands.ps1"" 
 
   REM cloning fwmeta and running initrepo script
-  set workingdirectory=%~dp0
-  start /b cmd /c "%ProgramFiles%\Git\git-bash.exe" %workingdirectory%clonefieldworks.sh
+  start /b cmd /c "%ProgramFiles%\Git\git-bash.exe" %~dp0clonefieldworks.sh
 
   echo Script has completed, you can close the console and restart your machine.
 ) else (
