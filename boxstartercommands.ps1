@@ -85,6 +85,9 @@ foreach ($app in $applicationList) {
     removeApp $app
 }
 
+#setting timeout to 'inifinite' temporarily to solve timeout issues with long VS Studio install, set back to default at end
+choco config set --name="'commandExecutionTimeoutSeconds'" --value="'0'"
+
 #installing helpful 3rd party software for Windows
 choco install chocolateygui -y
 choco install GoogleChrome -y
@@ -105,6 +108,9 @@ $argList = @(
 )
 
 choco install visualstudio2017community -y --force --package-parameters="'$argList --passive --norestart'"
+
+#setting timeout back to default 
+choco config unset --name="'commandExecutionTimeoutSeconds'"
 
 #--- reenabling critial items ---
 Enable-UAC
