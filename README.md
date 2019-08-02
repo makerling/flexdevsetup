@@ -1,9 +1,10 @@
 # flexdevsetup
 One-click script for setting up a dev environment for FLEx on Windows 10. Follows instructions from https://github.com/sillsdev/FwDocumentation/wiki/Contributing-to-FieldWorks-Development
 
-Instructions: clone on fresh Windows 10 machine (not tested on other version yet)
-
-run setup.bat batch script (right-click Run as administrator)
+Instructions: 
+- Clone on fresh Windows 10 machine (not tested on other version yet)
+- Run setup.bat batch script (right-click Run as administrator)
+  - If Windows 10 blocks this from running, you will need to disable SmartScreen (click 'more info' click 'run anyways')
 
 The script does the following:
 - leverages the boxstarter framework to complete the install without interruption, it's recommended to do a reboot after it is completed
