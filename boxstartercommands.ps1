@@ -87,7 +87,7 @@ foreach ($app in $applicationList) {
 }
 
 #setting timeout to 'inifinite' temporarily to solve timeout issues with long VS Studio install, set back to default at end
-choco config set --name="'commandExecutionTimeoutSeconds'" --value="'0'"
+choco config set --name="'commandExecutionTimeoutSeconds'" --value="'36000'"
 
 #installing helpful 3rd party software for Windows
 choco install chocolateygui -y
