@@ -4,6 +4,7 @@
 
 Update-SessionEnvironment #refreshing env to recognize boxstarter install
 
+#--- temporarily disabling UAC to avoid reboots during install, re-enable at end of script ---
 Disable-UAC
 
 #--- Configuring Windows properties ---
@@ -68,8 +69,8 @@ $applicationList = @(
 	"Microsoft.Print3D"
 	"*Autodesk*"
 	"*BubbleWitch*"
-    "king.com*"
-    "G5*"
+	"king.com*"
+	"G5*"
 	"*Dell*"
 	"*Facebook*"
 	"*Keeper*"
@@ -86,7 +87,7 @@ foreach ($app in $applicationList) {
     removeApp $app
 }
 
-#setting timeout to 'inifinite' temporarily to solve timeout issues with long VS Studio install, set back to default at end
+#increases timeout to temporarily to solve timeout issues with long VS Studio install, set back to default at end
 choco config set --name="'commandExecutionTimeoutSeconds'" --value="'36000'"
 
 #installing helpful 3rd party software for Windows
@@ -113,7 +114,7 @@ choco install visualstudio2017community -y --force --package-parameters="'$argLi
 #setting timeout back to default 
 choco config unset --name="'commandExecutionTimeoutSeconds'"
 
-#--- reenabling critial items ---
+#--- reenabling critical items ---
 Enable-UAC
 Enable-MicrosoftUpdate
 Install-WindowsUpdate -acceptEula
